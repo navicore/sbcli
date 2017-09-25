@@ -2,9 +2,11 @@
 
 A node commander cli for Azure Service Bus reading and writing
 
-## INSTALL
+## INSTALLATION
 
 something like:
+
+## USAGE
 
 ```console
 git clone https://github.com/navicore/sbcli.git && cd sbcli && yarn install && yarn link
