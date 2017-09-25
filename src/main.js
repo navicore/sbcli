@@ -4,34 +4,45 @@
 
 const program = require('commander')
 
-const { readFromQueue, writeToQueue } = require('./sb')
+const { readFromQueue, writeToQueue, writeToTopic } = require('./sb')
 
 program
   .version('0.0.1')
   .description('read from and write to Azure Service Bus')
 
 program
-  .command('write <topic> <message>')
-  .alias('w')
+  .command('publish <topic> <message>')
+  .alias('p')
   .description('write a message')
   .action((topic, message) => {
-    writeToQueue(topic, {message})
+    writeToTopic(topic, {body: message})
       .catch((error) => {
         console.info(`got: ${error}`)
       })
   })
 
 program
-  .command('read')
-  .alias('r')
-  .description('read a message')
-  .action(() => {
-    readFromQueue()
-      .then((result) => {
-        console.info(`got: ${result}`)
-      })
+  .command('write <queue> <message>')
+  .alias('w')
+  .description('write a message')
+  .action((queue, message) => {
+    writeToQueue(queue, {body: message})
       .catch((error) => {
         console.info(`got: ${error}`)
+      })
+  })
+
+program
+  .command('read <queue>')
+  .alias('r')
+  .description('read a message')
+  .action((queue) => {
+    readFromQueue(queue)
+      .then((result) => {
+        console.info(`got:\n${JSON.stringify(result)}`)
+      })
+      .catch((error) => {
+        console.info(`error:\n${JSON.stringify(error)}`)
       })
   })
 
