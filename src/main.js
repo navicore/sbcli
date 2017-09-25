@@ -37,10 +37,10 @@ program
   .action((queue) => {
     readFromQueue(queue)
       .then((result) => {
-        console.info(`got:\n${JSON.stringify(result)}`)
+        console.info(`${JSON.stringify(result, 0, 2)}`)
       })
       .catch((error) => {
-        console.info(`error:\n${JSON.stringify(error)}`)
+        console.error(`ERROR:\n${JSON.stringify(error, 0, 2)}`)
       })
   })
 
