@@ -26,6 +26,7 @@
   "homepage": "https://github.com/navicore/sbcli#readme",
   "dependencies": {
     "azure": "^2.0.0-preview",
+    "bluebird": "^3.5.0",
     "commander": "^2.11.0"
   }
 }
