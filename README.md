@@ -6,11 +6,11 @@ A node commander cli for Azure Service Bus reading and writing
 
 something like:
 
-## USAGE
-
 ```console
 git clone https://github.com/navicore/sbcli.git && cd sbcli && yarn install && yarn link
 ```
+
+## USAGE
 
 ```console
   Usage: sbcli [options] [command]
