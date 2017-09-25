@@ -1,0 +1,30 @@
+{
+  "name": "sbcli",
+  "preferGlobal": true,
+  "bin": "./main.js",
+  "version": "1.0.0",
+  "description": "A cli for Azure Service Bus reading and writing",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/navicore/sbcli.git"
+  },
+  "keywords": [
+    "npm",
+    "azure",
+    "\"service",
+    "bus\""
+  ],
+  "author": "Ed Sweeney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/navicore/sbcli/issues"
+  },
+  "homepage": "https://github.com/navicore/sbcli#readme",
+  "dependencies": {
+    "commander": "^2.11.0"
+  }
+}
