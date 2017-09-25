@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// Endpoint=sb://akkademo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=C+2I/kdR6qKWL6MdNJbHG0HGcBcOjkWhUUDLeOWtxh8=
-
 const program = require('commander')
 
 const { readFromQueue, writeToQueue, writeToTopic } = require('./sb')
