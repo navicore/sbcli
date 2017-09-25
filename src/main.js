@@ -8,7 +8,7 @@ const { readFromQueue, writeToQueue, writeToTopic } = require('./sb')
 
 program
   .version('0.0.1')
-  .description('read from and write to Azure Service Bus')
+  .description('IMPORTANT: set env var CONNSTR= to a Service Bus Connection String. See Shared access policies.')
 
 program
   .command('publish <topic> <message>')
