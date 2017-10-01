@@ -11,13 +11,13 @@ const options = {
 const writeToQueue = (queue, message) => {
   const svc = service()
   return svc.createQueueIfNotExistsAsync(queue, options)
-  .then(() => svc.sendQueueMessageAsync(queue, message))
+    .then(() => svc.sendQueueMessageAsync(queue, message))
 }
 
 const writeToTopic = (topic, message) => {
   const svc = service()
   return svc.createTopicIfNotExistsAsync(topic, options)
-  .then(() => svc.sendTopicMessageAsync(topic, message))
+    .then(() => svc.sendTopicMessageAsync(topic, message))
 }
 
 const readFromQueue = queue => service().receiveQueueMessageAsync(queue)
