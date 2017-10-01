@@ -1,5 +1,7 @@
 # sbcli
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8fc7d598bdf14d59839dcabfacd35642)](https://www.codacy.com/app/navicore/sbcli?utm_source=github.com&utm_medium=referral&utm_content=navicore/sbcli&utm_campaign=badger)
+
 A node commander cli for Azure Service Bus reading and writing
 
 ## INSTALLATION
